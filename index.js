@@ -6,11 +6,11 @@ const videosRouter = require('./routes/videos')
 
 
 require('dotenv').config()
-
-const {PORT, BACKEND_URL } = process.env
+ 
+const {PORT, BACKEND_URL,CLIENT_URL } = process.env
 
 app.use(cors({
-    origin: BACKEND_URL
+    origin: CLIENT_URL
 }));
 
 app.use(express.json());
